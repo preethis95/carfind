@@ -1,0 +1,189 @@
+@use '../../styles/variables' as *;
+
+.quiz {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.brand {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: $color-red;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin-top: 0.35rem;
+  color: $color-muted;
+  font-size: 0.95rem;
+}
+
+.progress {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.stepDot {
+  width: 2.5rem;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba($color-dark, 0.12);
+  transition: background 0.2s;
+
+  &.active {
+    background: $color-red;
+  }
+}
+
+.stepLabel {
+  text-align: center;
+  font-size: 0.85rem;
+  color: $color-muted;
+  margin-bottom: 1.25rem;
+}
+
+.panel {
+  background: $color-white;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  padding: 1.75rem;
+  min-height: 280px;
+}
+
+.stepContent h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.hint {
+  font-size: 0.875rem;
+  color: $color-muted;
+  margin-bottom: 1.25rem;
+}
+
+.rangeRow {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+
+  label {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    color: $color-muted;
+  }
+
+  input {
+    padding: 0.65rem 0.75rem;
+    border: 1px solid rgba($color-dark, 0.15);
+    border-radius: $radius-md;
+    font-size: 1rem;
+  }
+}
+
+.chipGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba($color-dark, 0.15);
+  border-radius: 999px;
+  background: $color-white;
+  color: $color-dark;
+  font-size: 0.9rem;
+  transition: all 0.15s;
+
+  &:hover {
+    border-color: $color-red;
+  }
+}
+
+.chipActive {
+  background: $color-red;
+  border-color: $color-red;
+  color: $color-white;
+}
+
+.slider {
+  width: 100%;
+  accent-color: $color-red;
+}
+
+.valueDisplay {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: $color-dark;
+}
+
+.checkList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+
+  input {
+    width: 1.1rem;
+    height: 1.1rem;
+    accent-color: $color-red;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btnPrimary,
+.btnSecondary {
+  flex: 1;
+  padding: 0.85rem 1.25rem;
+  border-radius: $radius-md;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+}
+
+.btnPrimary {
+  background: $color-red;
+  color: $color-white;
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+}
+
+.btnSecondary {
+  background: $color-white;
+  color: $color-dark;
+  border: 1px solid rgba($color-dark, 0.15);
+
+  &:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+}

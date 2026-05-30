@@ -1,0 +1,36 @@
+@use '../../styles/variables' as *;
+
+.ring {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.track {
+  stroke: rgba($color-dark, 0.1);
+}
+
+.progress {
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+.high .progress {
+  stroke: $color-green;
+}
+
+.medium .progress {
+  stroke: $color-orange;
+}
+
+.low .progress {
+  stroke: $color-red-low;
+}
+
+.label {
+  position: absolute;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $color-dark;
+}

@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: carfind-db
+    restart: always
+    environment:
+      POSTGRES_USER: carfind_user
+      POSTGRES_PASSWORD: carfind_password
+      POSTGRES_DB: carfind_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: carfind-backend
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/carfind_db
+      - SPRING_DATASOURCE_USERNAME=carfind_user
+      - SPRING_DATASOURCE_PASSWORD=carfind_password
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:

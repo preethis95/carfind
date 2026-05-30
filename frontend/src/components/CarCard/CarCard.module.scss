@@ -1,0 +1,69 @@
+@use '../../styles/variables' as *;
+
+.card {
+  background: $color-white;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  padding: 1.25rem 1.5rem;
+  position: relative;
+}
+
+.rank {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: $color-muted;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.brand {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $color-muted;
+}
+
+.name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0.15rem 0;
+}
+
+.variant {
+  font-size: 0.85rem;
+  color: $color-muted;
+  max-width: 220px;
+}
+
+.specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-size: 0.85rem;
+  color: $color-dark;
+  margin-bottom: 0.75rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.tag {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  background: $color-light-grey;
+  color: $color-dark;
+  text-transform: capitalize;
+}

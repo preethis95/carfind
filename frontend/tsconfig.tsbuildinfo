@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/api/matchapi.ts","./src/components/carcard/carcard.tsx","./src/components/matchscorering/matchscorering.tsx","./src/components/quiz/quiz.tsx","./src/pages/results/results.tsx","./src/types/index.ts","./src/utils/matchscorecolor.ts"],"version":"5.7.3"}
